@@ -1,5 +1,5 @@
 # springboot-freemarker
-Springboot 集成 FreeMarker 做的一个 demo，并实现了中英文切换的国际化，[点击预览]()
+Springboot 集成 FreeMarker 做的一个 demo，并实现了中英文切换的国际化，[点击预览](http://gentie.jverson.com:8080/freemarker/index)
 
 ## FreeMarker
 FreeMarker 是一款模板引擎，类似于之前常用的 JSP 及 Velocity 等，由于技术的发展，后两者已经慢慢被遗弃，Springboot 也是从 1.5 版本开始正式废弃 Velocity，取而代之首推的即 Apache 的 FreeMarker，此 demo 即初次参考手册使用 FreeMarker 搭建了一个后台页面，除了语法稍有不同外，与其它模板技术非常类似。

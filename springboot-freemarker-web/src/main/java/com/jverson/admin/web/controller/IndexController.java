@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
 import com.jverson.admin.web.common.PageVo;
 import com.jverson.admin.web.common.ResultVo;
@@ -35,7 +34,6 @@ public class IndexController {
 		pageVo.setPageSize(commentWrap.getPageSize());
 		resultVo.setData(pageVo);
 		resultVo.setCode(0);
-		System.out.println(JSON.toJSONString(resultVo));
         model.addAttribute("result", resultVo);
 		return "/list";
 	}

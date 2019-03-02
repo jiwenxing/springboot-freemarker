@@ -1,0 +1,17 @@
+/.apt_generated/
+/target/
+/.settings/
+/.project
+/.factorypath
+/.classpath
+/.springBeans
+*.iml
+*.ipr
+*.iws
+.idea/
+target/
+*.real_output.txt
+komento-search-api/.settings/
+*.classpath
+komento-search-web/.settings/
+*.project

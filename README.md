@@ -10,16 +10,15 @@ FreeMarker 是一款模板引擎，类似于之前常用的 JSP 及 Velocity 等
 - [FreeMarker 中文手册](http://freemarker.foofun.cn/toc.html)
 
 ## 国际化
-demo 同时还实现了中英文国际化，Springboot 应用中实现国际化非常简单，大概以下几个步骤
+demo 同时还实现了中英文国际化，Springboot 应用中实现国际化非常简单，大概以下几个步骤：
 
-### 在 FreeMarker 的 ftl 模板的 head 标签中引入 `<#import "/spring.ftl" as spring>`
-
+1. 在 FreeMarker 的 ftl 模板的 head 标签中引入 `<#import "/spring.ftl" as spring>`    
 其中 spring.ftl 文件位于 `org/springframework/spring-webmvc/5.0.6.RELEASE/spring-webmvc-5.0.6.RELEASE.jar!/org/springframework/web/servlet/view/freemarker/spring.ftl`
 
-### application.properties 中设置 spring.messages.basename=i18n/messages
+2. application.properties 中设置 spring.messages.basename=i18n/messages
 
-### resources 文件夹下创建 i18n 文件夹，分别创建 messages_en_US.properties， messages_zh_CN.properties， messages.properties（默认）
+3. resources 文件夹下创建 i18n 文件夹，分别创建 messages_en_US.properties， messages_zh_CN.properties， messages.properties（默认）
 
-### LocaleConf.java 配置国际化语言拦截器，设置默认语言
+4. LocaleConf.java 配置国际化语言拦截器，设置默认语言
 
-### ftl 中使用 `<@spring.message "index.title"/>` 引入国际化文件中定义的词句
+5. ftl 中使用 `<@spring.message "index.title"/>` 引入国际化文件中定义的词句

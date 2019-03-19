@@ -22,3 +22,22 @@ demo 同时还实现了中英文国际化，Springboot 应用中实现国际化�
 4. LocaleConf.java 配置国际化语言拦截器，设置默认语言
 
 5. ftl 中使用 `<@spring.message "index.title"/>` 引入国际化文件中定义的词句
+
+## 使用技巧
+
+### 使用 messageArgs
+
+注意定义arg时一定要使用数组
+```HTML
+<#assign total = [result.data.total]>
+<#assign pages = [(result.data.total/result.data.pageSize)?ceiling]>
+<span class="total"><@spring.messageArgs "index.page.total" total />, <@spring.messageArgs "index.page.num" pages /></span>
+```
+messages 定义
+```
+index.page.total=共 {0} 条记录
+index.page.num={0} 页
+
+index.page.total=共 {0} 条记录
+index.page.num={0} 页
+```
